@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --fuente: 'Raleway', sans-serif;
+
+    --color-principal: #FFF;
+    --color-texto: #464646;
+    
+    --color-enfasis: #2A7AE4;
+    --color-enfasis-boton: #2a7be428;
+    --color-footer: #EAF2FD;    
+    --color-inactivo: #A2A2A2;
+    
+    --letra-titulo: 1.4em;
+    --letra-texto: 0.9em;
+    --letra-negrita: 700;
+}
+
+.input_usuario {
+    border: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.contenedor_grid * {
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: var(--fuente);
+    font-size: 16px;
+}
+    .contenedor_grid {
+        display: grid;
+        grid-template: 
+        "header" auto
+        "promocional"
+        "main"
+        "footer" /
+        100%;
+    
+        /* - - - - -  Header  - - - - - */
+        .header, .header > * {
+            display: inline-flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+            .header {
+                grid-area: header;
+                width: 100;
+                height: 5em;
+                padding: 1em;
+
+                .header__buscador {
+                    .headerBuscador__logo {
+                        width: 6.3em;
+                    }
+
+                    .headerBuscador__input {
+                        display: none;
+                    }
+                }
+    
+                .header__boton {
+                    width: 10em;
+                    height: 3em;
+                    padding: 0.9em 1.2em;       
+
+                    background-color: var(--color-principal);
+                    border: 1px solid var(--color-enfasis);
+
+                    &:hover {
+                        background-color: var(--color-enfasis-boton);
+                    }
+                }
+
+                .header__lupa {
+                    width: 1em;
+                }
+            }
+
+        /* - - - - -  Promocional  - - - - - */
+        .promocional {
+            grid-area: promocional;
+            width: 100%;
+            height: 13em;
+
+            background-image: url(../IMG/hero.jpeg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            filter: brightness(0.9);
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 4.9em 1em 1em 1em;
+
+            color: var(--color-principal);
+
+            .promocional__titulo {
+                font-size: var(--letra-titulo);
+                font-weight: var(--letra-negrita);
+
+                margin-bottom: 0.4em;
+            }
+
+            .promocional__texto {
+                font-size: var(--letra-texto);
+                margin-bottom: 0.4em;
+            }
+
+            .promocionaln__boton {
+                display: flex;
+
+                width: 9em;
+                height: 3em;
+
+                color: var(--color-principal);
+                background-color: var(--color-enfasis);
+                border: none;
+
+                text-decoration: none;
+                justify-content: center;
+                align-items: center;
+
+                &:hover {
+                    background-color: var(--color-enfasis);
+                }
+            }
+        }
+
+        /* - - - - -  Main  - - - - - */
+        .main {
+            grid-area: main;
+            width: 100%;
+
+            .encabezadoProductos > *, .prodcutosArituculo__enlace {
+                font-weight: var(--letra-negrita);
+            }
+                .enlace {
+                    color: var(--color-enfasis);
+                    font-size: var(--letra-texto);
+                    text-decoration: none;
+                }
+                    .main__productos {
+                        padding: 1em;
+                        
+                        .encabezadoProductos {
+                            display: flex;
+                            justify-content: space-between;
+                            
+                            .mainProductosEncabezado__titulo {
+                                color: var(--color-texto);
+                                font-size: var(--letra-titulo);
+                            }
+
+                            .mainProductosEncabezado__boton {
+                                display: inline-flex;
+                                justify-content: center;
+                                align-items: center;
+                                
+                                & > span {
+                                    content: url(../IMG/flecha.svg);
+                                    margin-left: 0.5em;
+                                }
+                            }
+                        }
+                        
+                        .productos {
+                            display: grid;
+                            justify-content: space-between;
+                            grid-template-columns: repeat(auto-fit, minmax(8em, 1fr));
+
+                            gap: 1em;
+
+                            padding-top: 1em;
+
+                            .prodcutos__arituculo {
+                                overflow: hidden;
+                                
+                                &:nth-child(n+5) {
+                                    display: none;
+                                }
+
+                                & > *:not(.prodcutosArituculo__contenedor_imagen) {
+                                    display: block;
+                                    padding-top: 0.5em;
+                                }
+                                
+                                .prodcutosArituculo__contenedor_imagen {
+                                    width: 100%;
+                                    height: 10em;
+                                    
+                                    & > img {
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: cover;
+                                        object-position: center;
+                                    }
+                                }
+
+                                .prodcutosArituculo__titulo {
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                }
+
+                                .prodcutosArituculo__precio {
+                                    font-weight: var(--letra-negrita);
+                                }
+
+                                .prodcutosArituculo__enlace {
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+        }
+
+        /* - - - - -  Footer  - - - - - */
+        .footer * {
+            display: inline-block;
+            width: 100%;
+        }
+            .footer {
+                grid-area: footer;
+                
+                .footer__informacion {
+                    background-color: var(--color-footer);
+                    padding: 1em;
+
+                    .footer__enlaces {
+                        text-align: center;
+                        margin-bottom: 2em;
+        
+                        .footerEnlaces__logo {
+                            height: 3.125em;
+                        }
+        
+                        .footerEnlaces__enlace {
+                            text-decoration: none;
+                            color: var(--color-texto);
+                            font-weight: 500;
+        
+                            margin-top: 1em;
+                        }
+                    }
+
+                    .footerInformacion__formulario {
+                        .footerInformacionFormulario__titulo {
+                            font-weight: 700;
+                        }
+
+                        .footerInformacionFormulario__nombre, .footerInformacionFormulario__mesaje {
+                            box-shadow: 0px 1px 0px 0px rgba(200,200,200,1);
+                            border-radius: 4px;
+                        }
+                        
+                        & > form {
+                            margin-top: 0.5em;
+
+                            .footerInformacionFormulario__nombre {
+                                background-color: var(--color-principal);
+                                height: 3.5em;
+                                position: relative;
+                                margin-bottom: 1em;
+                                
+                                
+                                .footerInformacionFormularioNombre__input {
+                                    height: 3.5em;
+                                    margin-bottom: -1.5em;
+                                    padding: 0.5em 0.75em 0em 0.75em;
+
+                                    &:focus ~ .footerInformacionFormularioNombre__label,
+                                    &:not(:placeholder-shown) ~ .footerInformacionFormularioNombre__label {
+                                        font-size: 0.75em;
+
+                                        position: absolute;
+                                        left: 0;
+                                        top: 0;
+                                        transform: translateY(0);
+
+                                        pointer-events: none;
+                                        padding: 0.5em 0.9em;
+
+                                        transition: all 0.2s ease-in-out;
+                                    }
+                                }
+
+                                .footerInformacionFormularioNombre__label {
+                                    color: var(--color-inactivo);
+                                    font-size: 1em;
+
+                                    position: absolute;
+                                    left: 0;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+
+                                    pointer-events: none;
+                                    padding: 0.5em 0.9em;
+
+                                    transition: all 0.2s ease-in-out;
+
+                                }
+                            }
+                            
+                            .footerInformacionFormulario__mesaje {
+                                resize: none;
+
+                                height: 5.125em;
+                                overflow: auto;
+
+                                padding: 1em 0.75em;
+
+                                &::placeholder {
+                                    color: var(--color-inactivo);
+                                }
+                            }
+
+                            .footerInformacionFormulario__boton {
+                                width: 8.313em;
+                                height: 2.5em;
+
+                                background-color: var(--color-enfasis);
+                                border: none;
+                                color: var(--color-principal);-/
+
+                                padding: 0.75em;
+
+                                margin-top: 0.5em;
+
+                                &:hover {
+                                    background-color: var(--color-enfasis);
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                .footer__creditos {
+                    height: 6.375em;
+                    display: flex;
+                    text-align: center;
+                    align-items: center;
+                    padding: 2em 4.094em;
+                }
+        }
+    }
