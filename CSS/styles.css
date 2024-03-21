@@ -25,10 +25,12 @@
 }
 
 .contenedor_grid * {
+    /* Estilos principales */
     box-sizing: border-box;
     overflow: hidden;
-    font-family: var(--fuente);
     font-size: 16px;
+
+    font-family: var(--fuente);
 }
     .contenedor_grid {
         display: grid;
