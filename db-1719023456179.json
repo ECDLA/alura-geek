@@ -1,0 +1,64 @@
+{
+  "articulos": [
+    {
+      "urlImagen": "assets/articulos/Stormtrooper.jpg",
+      "titulo": "Stormtrooper",
+      "precio": "60",
+      "id": "001"
+    },
+    {
+      "urlImagen": "assets/articulos/GameBoyClassic.png",
+      "titulo": "GameBoy Classic",
+      "precio": "60",
+      "id": "002"
+    },
+    {
+      "urlImagen": "assets/articulos/Stormtrooper.jpg",
+      "titulo": "Stormtrooper",
+      "precio": "60",
+      "id": "003"
+    },
+    {
+      "urlImagen": "assets/articulos/GameBoyClassic.png",
+      "titulo": "GameBoy Classic",
+      "precio": "60",
+      "id": "004"
+    },
+    {
+      "urlImagen": "assets/articulos/Stormtrooper.jpg",
+      "titulo": "Stormtrooper",
+      "precio": "60",
+      "id": "005"
+    },
+    {
+      "urlImagen": "assets/articulos/GameBoyClassic.png",
+      "titulo": "GameBoy Classic",
+      "precio": "60",
+      "id": "006"
+    },
+    {
+      "urlImagen": "assets/articulos/Stormtrooper.jpg",
+      "titulo": "Stormtrooper",
+      "precio": "60",
+      "id": "007"
+    },
+    {
+      "urlImagen": "assets/articulos/GameBoyClassic.png",
+      "titulo": "GameBoy Classic",
+      "precio": "60",
+      "id": "008"
+    },
+    {
+      "urlImagen": "assets/articulos/Stormtrooper.jpg",
+      "titulo": "Stormtrooper",
+      "precio": "60",
+      "id": "009"
+    },
+    {
+      "urlImagen": "assets/articulos/GameBoyClassic.png",
+      "titulo": "GameBoy Classic",
+      "precio": "60",
+      "id": "010"
+    }
+  ]
+}

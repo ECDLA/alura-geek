@@ -1,0 +1,57 @@
+@media (width >= 992px) {
+    main {
+        padding: 60px 40px;
+        display: grid;
+        grid-template:
+            'productos agregarProducto' / 60% ;
+    }
+
+    .agregarProducto {
+        grid-area: agregarProducto;
+
+        .formulario {
+            .formulario__botones {
+                width: 100%;
+                display: flex;
+                gap: 40px;
+                justify-content: space-between;
+
+                .formulario__boton {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .productos {
+        flex-wrap: nowrap;
+        padding: 0 40px 40px 40px;
+
+        productos__titulo {
+            margin: 40px 0;
+        }
+    }
+
+    .articulos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-height: 525px;
+        padding: 15px;
+        box-shadow: -12px 10px 5.8px 0px rgba(0, 0, 0, 0.25);
+
+        & > :first-child {
+            margin-left: 0;
+        }
+    
+        & > :last-child {
+            margin-right: 0;
+        }
+
+        .articulos__articulo {
+            .productos__grupoPrecioYEliminar:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}

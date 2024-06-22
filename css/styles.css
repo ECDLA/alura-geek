@@ -1,0 +1,211 @@
+    /* Fuente Press Start 2P */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Fuente IBM Plex Mono */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/* Aplicacion de estilos universal */
+* {
+    font-family: "IBM Plex Mono", monospace;
+}
+
+body {
+    & * {
+        box-sizing: border-box;
+    }
+    
+    & > * {
+        overflow: hidden;
+    }
+}
+
+/* Encabezado */
+header {
+    padding: 20px 28px;
+    background-color: #5300C8;
+
+    box-shadow: 0px 7px 0.9px 0px rgba(0, 0, 0, 0.25);
+}
+
+.logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .logo__imagen {
+        width: 138px;
+        height: 56px;
+    }
+
+    .logo__titulo {
+        font-family: "Press Start 2P", system-ui;
+        font-size: 1.3rem;
+        color: #E5E5E5;
+    }
+    
+}
+
+/* Principal */
+main {
+    margin-top: 2.063rem;
+}
+
+.agregarProducto {
+    padding: 2.5rem;
+
+    &, .formulario {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .agregarProducto__titulo {
+        font-family: "Press Start 2P", system-ui;
+        color: #000;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.formulario {
+    .formulario__entrada {
+        border: solid 3px #03318ca4;
+        border-radius: 1.875rem;
+        padding: 0.625rem;
+
+        &::placeholder {
+            color: #03318ca4;
+        }
+
+        &:hover, &:focus, &:focus-visible {
+            border: solid 3px #03318C;
+            outline: none;
+
+            &::placeholder {
+                color: #03318C;
+            }
+        }
+    }
+
+    .formulario__botones {
+        display: flex;
+        justify-content: space-around;
+
+        .formulario__boton {
+            border-radius: 0.938rem;
+            border: solid 0.188rem #03318C;
+            font-size: 1rem;
+            padding: 13px 25px;
+        }
+
+        .formulario__boton-primario {
+            background-color: #03318C;
+            color: #FFF;
+
+            &:hover {
+                background-color: #022469;
+            }
+        }
+
+        .formulario__boton-secundario {
+            background-color: #FFF;
+            color: #03318C;
+
+            &:hover {
+                background-color: #00329727;
+            }
+        }
+    }
+}
+
+/* PRODUCTOS */
+.productos {
+    display: flex;
+    flex-direction: column;
+
+    .productos__titulo {
+    margin: 3.625rem 0;
+    font-family: "Press Start 2P", system-ui;
+    font-size: 1.5rem;
+    text-align: center;
+    }
+;
+    align-items: center;
+}
+
+.articulos {
+    overflow: auto;
+    scrollbar-color: #5D04D9 #5d04d934;
+    display: flex;
+    gap: 20px;
+    padding-bottom: 44px;
+
+    width: 100%;
+    height: 100%;
+    color: #FFF;
+
+    & > :first-child {
+        margin-left: 1rem;
+    }
+
+    & > :last-child {
+        margin-right: 1rem;
+    }
+
+    .articulos__articulo {
+        padding: 0.625rem;
+        border: solid 3px #000;
+        border-radius: 10px;
+        background: #5D04D9;
+        box-shadow: -5px 6px 3.3px 0px rgba(0, 0, 0, 0.25);
+
+        & > img {
+            width: 174px;
+            aspect-ratio: 1/1;
+        }
+    }
+
+    .productos__imagen {
+        border-radius: 5px;
+        border: 3px solid #000;
+    }
+
+    .productos__tiutloArticulo {
+        margin: 0.625rem 0;
+    }
+
+    .productos__grupoPrecioYEliminar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+/* FOOTER */
+footer {
+    margin-top: 60px;
+    padding: 32px 28px;
+    text-align: center;
+
+    background: #5300C8;
+    box-shadow: 0px -10px 9.5px 0px rgba(0, 0, 0, 0.25);
+
+    color: #FFF;
+}
+
+.creditos {
+    .creditos__titulo {
+        margin-bottom: 1.5rem;
+        font-weight: bold;
+    }
+
+    .creditos__subtitulo {
+        font-weight: 200;
+        
+    }
+}

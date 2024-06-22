@@ -1,0 +1,28 @@
+{
+  "articulos": [
+    {
+      "urlImagen": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/c1/a6/37/c1a637a0-29ad-fec8-b936-1bf50f09e8ac/859756758075_cover.jpg/1200x1200bf-60.jpg",
+      "titulo": "mona",
+      "precio": "69",
+      "id": "KXhVEsD"
+    },
+    {
+      "urlImagen": "https://wallpapercave.com/wp/wp8115134.png",
+      "titulo": "LipxLip",
+      "precio": "69",
+      "id": "_ndxBNc"
+    },
+    {
+      "urlImagen": "http://127.0.0.1:5500/assets/articulos/Stormtrooper.jpg",
+      "titulo": "Stormtrooper",
+      "precio": "60",
+      "id": "eUIzUh5"
+    },
+    {
+      "urlImagen": "http://127.0.0.1:5500/assets/articulos/GameBoyClassic.png",
+      "titulo": "GameBoy Classic",
+      "precio": "60",
+      "id": "NwwUUhL"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alura Geek</title>
+
+    <!-- Iconos google -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <!-- HOJAS DE ESTILOS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/stylesEscritorio.css">
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img class="logo__imagen" src="assets/corazonesEnPixelArt.svg" alt="corazones en PixelArt">
+            <h1 class="logo__titulo">AluraGeek</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="agregarProducto">
+            <h2 class="agregarProducto__titulo">AGREGAR PRODUCTO:</h2>
+    
+            <!-- Formulario para enviar los articulos a la API -->
+            <form action="#" method="post" class="formulario">
+                <input type="text" name="nombreDelArticulo" id="nombreDelArticulo" class="formulario__entrada" placeholder="Nombre..." required>
+    
+                <input type="number" name="precioDelArticulo" id="precioArticulo" placeholder="Precio..." class="formulario__entrada" required>
+    
+                <input type="url" name="urlImagen" id="urlImagen" placeholder="Imagen..." class="formulario__entrada" required>
+    
+                <div class="formulario__botones">
+                    <input class="formulario__boton formulario__boton-primario" type="submit" value="Enviar" data-submit>
+                    <input class="formulario__boton formulario__boton-secundario" type="reset" value="Limpiar">
+                </div>
+            </form>
+        </section>
+
+        <section class="productos">
+            <h2 class="productos__titulo">MIS PRODUCTOS:</h2>
+
+            <section class="articulos" data-articulos>
+                
+                <!--                 
+                <div class="articulos__articulo" id='000'>
+                    <img src="assets/articulos/Stormtrooper.jpg" alt="Articulo de la tienda" class="productos__imagen">
+                    <h3 class="productos__tiutloArticulo">Stormtrooper</h3>
+    
+                    <div class="productos__grupoPrecioYEliminar">
+                        <p class="productos__precioArticulo">$ 60,00</p>
+                        <img src="assets/iconos/basura.svg" alt="Icono, bote de basura" data-eliminarCarta>
+                    </div>
+                </div>
+                -->
+                
+            </section>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="logo">
+            <img class="logo__imagen" src="assets/corazonesEnPixelArt.svg" alt="corazones en PixelArt">
+            <h1 class="logo__titulo">AluraGeek</h1>
+        </div>
+
+        <div class="creditos">
+            <h4 class="creditos__titulo">DESARROLLADO POR JOSE FLORES</h4>
+            <h5 class="creditos__subtitulo">ALURA LATAM - 2024</h5>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/mostrarArticulos.js" type="module"></script>
+</body>
+</html>
