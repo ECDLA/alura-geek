@@ -1,4 +1,4 @@
-const urlAPI = 'http://localhost:3001/articulos'
+const urlAPI = 'https://alura-geek-sand-mu.vercel.app/'
 
 export async function conexionAPI(parametro = '') {    
     try
