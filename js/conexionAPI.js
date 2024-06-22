@@ -1,4 +1,4 @@
-const urlAPI = 'https://alura-geek-sand-mu.vercel.app/db.json'
+const urlAPI = 'https://alura-geek-3y99.onrender.com/articulos'
 
 export async function conexionAPI(parametro = '') {    
     try
