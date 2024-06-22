@@ -62,7 +62,8 @@ function agregarArticulo() {
     const id = generarHexAleatorio();
 
     document.querySelector('form').addEventListener('submit', evento => {
-        // evento.preventDefault();
+        evento.preventDefault();
+        evento.reload();
 
         const data = Object.fromEntries(
             new FormData(evento.target)
