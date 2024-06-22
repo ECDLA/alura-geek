@@ -63,7 +63,7 @@ function agregarArticulo() {
 
     document.querySelector('form').addEventListener('submit', evento => {
         evento.preventDefault();
-        evento.reload();
+        location.reload();
 
         const data = Object.fromEntries(
             new FormData(evento.target)
