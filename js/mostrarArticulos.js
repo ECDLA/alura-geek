@@ -61,8 +61,9 @@ function generarHexAleatorio() {
 function agregarArticulo() {
     const id = generarHexAleatorio();
 
-    document.querySelector('form').addEventListener('submit', evento => {
+    document.querySelector('form').addEventListener('submit', async evento => {
         evento.preventDefault();
+        document.querySelector('[data-submit]').disabled = true;
         
         const data = Object.fromEntries(
             new FormData(evento.target)
@@ -73,9 +74,14 @@ function agregarArticulo() {
         const nombreDelArticulo = data.nombreDelArticulo;
         const precioDelArticulo = data.precioDelArticulo;
         const urlImagen = data.urlImagen;
+
+        try {
+            await agregarObjeto(nombreDelArticulo, precioDelArticulo, urlImagen);
+            location.reload();
+        } catch (error) {
+            console.log();
+        }
         
-        agregarObjeto(nombreDelArticulo, precioDelArticulo, urlImagen);
-        location.reload();
     })
 }
 
