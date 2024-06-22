@@ -63,19 +63,19 @@ function agregarArticulo() {
 
     document.querySelector('form').addEventListener('submit', evento => {
         evento.preventDefault();
-        location.reload();
-
+        
         const data = Object.fromEntries(
             new FormData(evento.target)
         )
-
+        
         // alert(JSON.stringify(data));
-
+        
         const nombreDelArticulo = data.nombreDelArticulo;
         const precioDelArticulo = data.precioDelArticulo;
         const urlImagen = data.urlImagen;
-
+        
         agregarObjeto(nombreDelArticulo, precioDelArticulo, urlImagen);
+        location.reload();
     })
 }
 
